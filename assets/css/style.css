@@ -196,3 +196,28 @@ header{
         width: 480px;
         box-shadow: 0px 5px 10px #333;
     }
+
+    .section-services{
+        display: flex;
+    }
+    .section-service:first-child 
+    /*  :first-child = para colocar q  qualquer tag na primeira div*/{
+        border-left: 1px solid #333;
+    }
+    .section-service{
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #333;
+        padding: 15px;
+    }
+    .section-service h4{
+        margin-top: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+
+    }
+    .section-service p {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #999;
+    }
