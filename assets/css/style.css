@@ -183,8 +183,9 @@ header{
     }
     .section-aboutus--right{
         width: 500px;
-        box-shadow: 0px 5px 10px #333;
+        text-align: center;
     }
     .section-aboutus--right img{
-        width: 100%;
+        width: 480;
+        box-shadow: 0px 5px 10px #333;
     }
