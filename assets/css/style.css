@@ -27,6 +27,7 @@ header{
     width: 80px;
     height: 80px;
     background-color: #b28756;
+    border-radius:40px;
 }
 .menu{
     flex: 1;
