@@ -113,9 +113,9 @@ header{
     text-transform: uppercase;
     font-size: 15px;
     margin-top: 20px;
-    }
+}
   
-    .banner .sliders-pointers {
+.banner .sliders-pointers {
     width: 100vw;
     height: 20px;
     position: absolute;
@@ -124,7 +124,7 @@ header{
     justify-content: center;
     align-items: center;
     }
-    .banner .pointer {
+.banner .pointer {
     width: 15px;
     height: 15px;
     border: 2px solid #b28756;
@@ -132,92 +132,130 @@ header{
     margin-left: 5px;
     margin-right: 5px;
     cursor: pointer;
-    }
-    .banner .pointer.active {
+}
+.banner .pointer.active {
     background-color: #b28756;
-    }
+}
     
     /* CSS DE AREAS GERAIS */
-    .default{
+.default{
         padding-top: 50px;
         padding-bottom: 50px;
-    }
-    .default .section-title,
-    .default .section-desc{
-               text-align: center;
-               text-transform: uppercase;
-               font-weight: 600;
-    }
-    .default .section-title{
+}
+.default .section-title,
+.default .section-desc{
+         text-align: center;
+         text-transform: uppercase;
+         font-weight: 600;
+}
+.default .section-title{
         font-size: 20px;
-    }
-    .default .section-desc{
+}
+.default .section-desc{
         font-size: 12px;
         color: #CCC;
         margin-top: 10px;
         margin-bottom: 40px;
-    }
-    .default .section-body{
+}
+.default .section-body{
         max-width: 1140px;
         margin: auto;
-    }
-    .default.light {
+}
+.default.light {
         background-color: #f7f7f7;
-    }
-    .default.light .section-title,
-    .default.light .section-body{
+}
+.default.light .section-title,
+.default.light .section-body{
         color: #000;
-    }
-    .default.dark{
+}
+.default.dark{
         background-color: #000;
-    }
-    .default.dark .section-title,
-    .default.dark .section-body{
+}
+.default.dark .section-title,
+.default.dark .section-body{
         color: #FFF;
-    }
+}
 
-    /* CSS DE AREAS ESPECIFICAS */
+    /* segunda parte SERVIÇOS*/
 
-    .section-aboutus{
+.section-aboutus{
         display: flex;
-    }
-    .section-aboutus--left{
+}
+.section-aboutus--left{
         flex: 1;
-    }
-    .section-aboutus--left p{
+}
+.section-aboutus--left p{
            font-size: 14px;
            line-height: 25px;
-    }
-    .section-aboutus--right{
+}
+.section-aboutus--right{
         width: 520px;
         text-align: center;
-    }
+}
     .section-aboutus--right img{
         width: 480px;
         box-shadow: 0px 5px 10px #333;
-    }
+}
 
-    .section-services{
+.section-services{
         display: flex;
-    }
-    .section-service:first-child 
+}
+.section-service:first-child 
     /*  :first-child = para colocar q  qualquer tag na primeira div*/{
         border-left: 1px solid #333;
-    }
-    .section-service{
+}
+.section-service{
         flex: 1;
         text-align: center;
         border-right: 1px solid #333;
         padding: 15px;
-    }
-    .section-service h4{
+}
+.section-service h4{
         margin-top: 20px;
         font-size: 18px;
         text-transform: uppercase;
 
-    }
-    .section-service p {
+}
+.section-service p {
         margin-top: 10px;
         font-size: 13px;
         color: #999;
-    }
+}
+
+
+     /* TERCEIRA PARTE  'NOSSOS PROJETOS'*/
+
+
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-projects--filters{
+       border: 1px solid #ccc;
+       background-color: #eee;
+       border-radius: 30px;
+       display: inline-block;
+       padding: 0px 20px;
+}
+.section-projects--filters ul,
+.section-projects--filters li{
+          list-style: none;
+}
+.section-projects--filters li{
+           display: inline-block;
+           padding: 10px;
+           text-transform: uppercase;
+           font-size: 13px;
+           border-left: 1px solid #ccc;
+           color: #555;
+           border-bottom: 3px solid #eee;
+           cursor: pointer;
+}
+.section-projects--filters li:hover,
+.section-projects--filters li.active {
+    border-bottom: 3px solid #b28756;
+}
+.section-projects--filters li:first-child{
+    border-left: 0;
+}
