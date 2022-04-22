@@ -1,398 +1,321 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    overflow-x: hidden;/* todo conteudo que passar da horizontal (acaba com a barra de rolagem em baixo)
-    será iguinorado*/
-}
-header{
-    height: 100px;
-    background-color: #000;
-    color: #FFF;
-}
-.header{
-    max-width: 1140px;
-    height: 100px;
-    /*background-color: red;*/
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-.logo{
-   width: 100px;
-}
-.logoimg{
-    width: 80px;
-    height: 80px;
-    background-color: #b28756;
-    border-radius: 40px;
-}
-.menu{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;/* POSICIONA O CONTEUDO DA DIREITA PARA ESQUERDA*/ 
-    /*background-color: red;*/
-}
-.menu ul,
-.menu li {
-    list-style: none;
-}
-.menu ul {
-    display: flex;
-}
-.menu li a {
-    color: #FFF;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    height: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid #000000;
-}
-.menu li a:hover,
-.menu .active a{
-    border-bottom: 5px solid #b28756;
-    color: #CCC;
-}
-.button {
-    display: inline-block;
-    background-color: #b28756;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-    }
-.banner {
-    height: calc(100vh - 100px);
-    background-color: rgb(107, 107, 107);
-    background-image: url(../imagens/bg.jpg);
-    background-size: cover;/*ajusta a imagem de forma que ele preencha todo o espaço*/
-    background-position: bottom;/*o BOTTOM vai priorizar a parte de baixo da imagem = ao CENTER que prioriza o centro da imagem */
-    overflow: hidden;/* teg para o banner slide,tudo que passar da lateral da tela ele iguinora e a barra de rolagem pra direita some */ 
-}
-.banner .sliders {
-    width:1000vw ;
-    height:100% ;
-    display: flex;
-}
-.banner .slide {
-    width:100vw ;
-    height:100% ;
-    display: inline-block;/* INLINE- para ficar um do lado do outro -BLOCK  para mantar as propriedades  por isso INLINE-BLOCK*/
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.banner .slidearea{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-}
-.banner h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 60px;  
-}
-.banner h1 span {
-    color: #b28756;  
-    padding-left: 68px;
-}
-.banner .slidearea h2 {
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-top: 20px;
-}
-  
-.banner .sliders-pointers {
-    width: 100vw;
-    height: 20px;
-    position: absolute;
-    margin-top: -50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-.banner .pointer {
-    width: 15px;
-    height: 15px;
-    border: 2px solid #b28756;
-    border-radius: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-.banner .pointer.active {
-    background-color: #b28756;
-}
-    
-    /* CSS DE AREAS GERAIS */
-.default{
-        padding-top: 50px;
-        padding-bottom: 50px;
-}
-.default .section-title,
-.default .section-desc{
-         text-align: center;
-         text-transform: uppercase;
-         font-weight: 600;
-}
-.default .section-title{
-        font-size: 20px;
-}
-.default .section-desc{
-        font-size: 12px;
-        color: #CCC;
-        margin-top: 10px;
-        margin-bottom: 40px;
-}
-.default .section-body{
-        max-width: 1140px;
-        margin: auto;
-}
-.default.light {
-        background-color: #f7f7f7;
-}
-.default.light .section-title,
-.default.light .section-body{
-        color: #000;
-}
-.default.dark{
-        background-color: #000;
-}
-.default.dark .section-title,
-.default.dark .section-body{
-        color: #FFF;
-}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Awax</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="assets\css\style.css"/>
+    </head>
+    <body>
+       <header>
+           <div class="header">
+                <div class="logo">
 
-    /* segunda parte SERVIÇOS*/
+                   <div class="logoimg"></div>
+                </div>
 
-.section-aboutus{
-        display: flex;
-}
-.section-aboutus--left{
-        flex: 1;
-}
-.section-aboutus--left p{
-           font-size: 14px;
-           line-height: 25px;
-}
-.section-aboutus--right{
-        width: 520px;
-        text-align: center;
-}
-    .section-aboutus--right img{
-        width: 480px;
-        box-shadow: 0px 5px 10px #333;
-}
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="">Home</a></li>
+                            <li><a href="">Sobre nós</a></li>
+                            <li><a href="">Serviços</a></li>
+                            <li><a href="">Nossos projetos</a></li>
+                            <li><a href="">Preço</a></li>
+                            <li><a href="">Entre em contato</a></li>   
+                        </ul>
+                    </nav>
+                </div>
+           </div>
+       </header>
+       <main>
+            <section class="banner">
+                <div class="sliders" style="margin-left: 0;">
+                    <div class="slide">
+                        <div class="slidearea">
+                            <h1>O DESIGN É SOBRE<br/><span>COMUNICAÇÃO</span></h1>
+                            <h2>Ligue para nós: +55 21 1234 56789</h2>
+                            <a href="" class="button">Entrar em contato!</a>
+                        </div>
+                    </div><div class="slide">
+                        <div class="slidearea">
+                            <h1>Design is About<br/><span>COMUNICAÇÃO</span></h1>
+                            <h2>Call US: +00 0 1234 5678</h2>
+                            <a href=""class="button">GO GO GO!</a>
+                        </div>
+                    </div><div class="slide">
+                        <div class="slidearea">
+                            <h1>Design is About<br/><span>Communication</span></h1>
+                            <h2>Call US: +00 0 1234 5678</h2>
+                            <a href=""class="button">YEEEEEEEE!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliders-pointers">
+                    <div class="pointer active"></div>
+                    <div class="pointer"></div>
+                    <div class="pointer"></div>
+                </div>
+            </section>
 
-.section-services{
-        display: flex;
-}
-.section-service:first-child 
-    /*  :first-child = para colocar q  qualquer tag na primeira div*/{
-        border-left: 1px solid #333;
-}
-.section-service{
-        flex: 1;
-        text-align: center;
-        border-right: 1px solid #333;
-        padding: 15px;
-}
-.section-service h4{
-        margin-top: 20px;
-        font-size: 18px;
-        text-transform: uppercase;
-
-}
-.section-service p {
-        margin-top: 10px;
-        font-size: 13px;
-        color: #999;
-}
+            <section class="default light">
+                <div class="section-title">sobre nós</div>
+                <div class="section-desc">Quem nós somos?</div>
+                <div class="section-body">
+                    <div class="section-aboutus">
+                        <div class="section-aboutus--left">
+                            <p> ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pretium enim.
+                            Aliquam non ex sed tortor sodales finibus sed vulputate massa. Donec nec aliquam purus.
+                            Quisque ac tortor ut neque tincidunt semper eu vitae lectus. Vivamus vitae turpis sapien.
+                            Etiam in nisi in felis rhoncus consectetur nec sit amet tortor.
+                            Sed enim nibh, luctus nec massa ornare, ullamcorper venenatis tortor. 
+                            Donec justo sem, vulputate non leo non.</p><br/>
+                            <a href="" class="button">Learn More</a>
+                        </div>
+                        <div class="section-aboutus--right">
+                          <img src="media/foto9.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-     /* TERCEIRA PARTE  'NOSSOS PROJETOS'*/
+
+            <section class="default dark">
+                <div class="section-title">Serviços</div>
+                <div class="section-desc">Serviços que fornecemos</div>
+                <div class="section-body">
+                   <div class="section-services">
+                       <div class="section-service">
+                           <img src="assets/imagens/medalha.png"/>
+                           <h4>Design de<br/> alta qualidade</h4>
+                           <p>vulputate non leo non</p>
+                       </div>
+                       <div class="section-service">
+                           <img src="assets/imagens/estrela.png"/>
+                           <h4>Design moderno</h4>
+                           <p>ullamcorper venenatis tortor. 
+                            Donec justo sem, vulputate</p>
+                       </div>
+                       <div class="section-service">
+                           <img src="assets/imagens/relogio.png"/>
+                           <h4>Atualizações<br/> regulares</h4>
+                           <p>Sed enim nibh, luctus nec </p>
+                       </div>
+                       <div class="section-service">
+                           <img src="assets/imagens/balao.png"/>
+                           <h4>suporte rápido <br/>e gratuito</h4>
+                           <p> Aliquam non ex sed tortor sodales finibus sed</p>
+                       </div>
+                   </div>
+                </div>
+            </section>
 
 
-.section-projects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.section-projects--filters{
-       border: 1px solid #ccc;
-       background-color: #eee;
-       border-radius: 30px;
-       display: inline-block;
-       padding: 0px 20px;
-}
-.section-projects--filters ul,
-.section-projects--filters li{
-          list-style: none;
-}
-.section-projects--filters li{
-           display: inline-block;
-           padding: 10px;
-           text-transform: uppercase;
-           font-size: 13px;
-           border-left: 1px solid #ccc;
-           color: #555;
-           border-bottom: 3px solid #eee;
-           cursor: pointer;
-}
-.section-projects--filters li:hover,
-.section-projects--filters li.active {
-    border-bottom: 3px solid #b28756;
-}
-.section-projects--filters li:first-child{
-    border-left: 0;
-}
-.section-projects--photos{
-    width: 100vw;
-    max-width: 1140px;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;/*Se caso as divs flex não couber na linha ela quebra e põem na linha a baixo*/
-    justify-content: center;
-}
-.section-projects--photo{
-    width: 280px;/* 280px é o suficiente para caber em um celular */
 
-}
-.section-projects--photoarea{
-    margin: 10px;
-    width: 260px;
-    height: 160px;
-}
-.section-projects--photoarea img {
-    width: inherit;/*essa teg faz erdar a largura da div anterior que seria photoarea */
-    height: inherit;/*essa teg faz erdar a o tamanho da div anterior que seria photoarea */
-}
-.section-projects--photoinfo{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: inherit;/*essa teg faz erdar a largura da div anterior que seria photoarea */
-    height: inherit;/*essa teg faz erdar a o tamanho da div anterior que seria photoarea */
-    display: none;
-    flex-direction: column;/* para ficar um a baixo do outro */
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
 
-}
-.section-projects--photoinfo h5{
-    font-size: 18px;
-    font-weight: 600;
-}
-.section-projects--photoarea:hover .section-projects--photoinfo{
-    display: flex;
-}
-.bg-team{
-    background-image: url('../imagens/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 0;
-}
-.section-team-area {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.section-team{
-    overflow: hidden;
-    max-width: 880px;
-    margin: auto;
-}
 
-.section-team .sliders {
-    width:1000vw ;
-    height:100% ;
-    display: flex;
-}
-.section-team .slide {
-    width: 280px ;
-    height:100% ;
-    min-height: 300px;
-    display: inline-block;/* INLINE- para ficar um do lado do outro -BLOCK  para mantar as propriedades  por isso INLINE-BLOCK*/
-    background-color: #FFF;
-    margin-right: 20px;
-}
-.section-team .slidearea{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    padding: 30px;
-}
-.section-team-area .sliders-pointers {
-    margin-top: 30px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .section-team-area .pointer {
-    width: 15px;
-    height: 15px;
-    border: 2px solid #b28756;
-    border-radius: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-.section-team-area .pointer.active {
-    background-color: #b28756;
-}
-.section-team--avatar{
-    width: 150px;
-    height: auto;
-    border-radius: 100px;
-}
-.img-christopher{
-    width: 163px;
-    height: auto;
-}
-.section-team--name{
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 17px;
-    margin-top: 30px;
-}
-.section-team--role{
-    font-size: 14px;
-    color: #747474;
-    margin-top: 5px;
-}
-.section-team--social{
-    display: flex;
-    margin-top: 20px;
-}
-.section-team--social a{
-    display: inline-flex;/* me dá a possibilidade de usar o justify-content: center; ,align-items: center; para centralizar os icons */
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: #999;
-    border-radius: 13px;
-    margin-right: 10px;
-}
-.section-team--social a:hover{
-    background-color: #b28756;
-}
+            <section class="default light">
+                <div class="section-title">nossos projetos</div>
+                <div class="section-desc">o que criamos</div>
+                <div class="section-body">
+                    <div class="section-projects">
+                        <div class="section-projects--filters">
+                            <ul>
+                                <li>Tudo</li>
+                                <li class="active">Fotos</li>
+                                <li>Marca</li>
+                                <li>Desenvolvimento</li>
+                                <li>Diversos</li>
+                            </ul>
+                        </div>
+                        <div class="section-projects--photos">
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto1.jpg"/>
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto2.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto3.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto4.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto5.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto6.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto1.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto2.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto3.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto4.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto5.jpg"/>
+                                </div>
+                            </div> <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>ABOUT</h5>
+                                        <p>consectetur adipiscing elit.</p>
+                                    </div>
+                                    <img src="media/foto6.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="button">mais projetos</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="default dark bg-team">
+                <div class="section-team-area">
+                    <div class="section-title">Nosso time</div>
+                    <div class="section-desc">Nossos Colaboradores</div>
+                    <div class="section-body">
+                        <div class="section-team">
+                            <div class="sliders" style="margin-left: 0;">
+                                <div class="slide">
+                                    <div class="slidearea">
+                                       <img class="section-team--avatar img-christopher" src="media/christopher.jpg"/>
+                                       <div class="section-team--name">Christopher Teles</div>
+                                       <div class="section-team--role">Desenvolvedor Front-end</div>
+                                       <div class="section-team--social">
+                                           <a href=""><img src="assets/imagens/facebook.png"/></a>
+                                           <a href=""><img src="assets/imagens/googleplus.png"/></a>
+                                           <a href=""><img src="assets/imagens/linkedin.png"/></a>
+                                           <a href=""><img src="assets/imagens/pinterest.png"/></a>
+                                           <a href=""><img src="assets/imagens/twitter.png"/></a>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slidearea">
+                                       <img class="section-team--avatar" src="media/mulher1.png"/>
+                                       <div class="section-team--name">Anna Jhons</div>
+                                       <div class="section-team--role">Desenvolvedor Back-end</div>
+                                       <div class="section-team--social">
+                                           <a href=""><img src="assets/imagens/facebook.png"/></a>
+                                           <a href=""><img src="assets/imagens/googleplus.png"/></a>
+                                           <a href=""><img src="assets/imagens/linkedin.png"/></a>
+                                           <a href=""><img src="assets/imagens/pinterest.png"/></a>
+                                           <a href=""><img src="assets/imagens/twitter.png"/></a>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slidearea">
+                                       <img class="section-team--avatar" src="media/homem1.png"/>
+                                       <div class="section-team--name">Mike Shiller</div>
+                                       <div class="section-team--role">líder técnico</div>
+                                       <div class="section-team--social">
+                                           <a href=""><img src="assets/imagens/facebook.png"/></a>
+                                           <a href=""><img src="assets/imagens/googleplus.png"/></a>
+                                           <a href=""><img src="assets/imagens/linkedin.png"/></a>
+                                           <a href=""><img src="assets/imagens/pinterest.png"/></a>
+                                           <a href=""><img src="assets/imagens/twitter.png"/></a>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slidearea">
+                                       <img class="section-team--avatar" src="media/christopher.jpg"/>
+                                       <div class="section-team--name">Christopher Teles</div>
+                                       <div class="section-team--role">Desenvolvedor Front-end</div>
+                                       <div class="section-team--social">
+                                           <a href=""><img src="assets/imagens/facebook.png"/></a>
+                                           <a href=""><img src="assets/imagens/googleplus.png"/></a>
+                                           <a href=""><img src="assets/imagens/linkedin.png"/></a>
+                                           <a href=""><img src="assets/imagens/pinterest.png"/></a>
+                                           <a href=""><img src="assets/imagens/twitter.png"/></a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliders-pointers">
+                            <div class="pointer active"></div>
+                            <div class="pointer"></div>
+                            <div class="pointer"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+        <footer>
+                    
+        </footer>
+    </body>
+</html>
+                    
