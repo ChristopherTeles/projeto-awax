@@ -284,7 +284,7 @@ header{
 }
 .section-projects--photoinfo{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     width: inherit;/*essa teg faz erdar a largura da div anterior que seria photoarea */
     height: inherit;/*essa teg faz erdar a o tamanho da div anterior que seria photoarea */
     display: none;
