@@ -1002,8 +1002,15 @@ footer {
         flex-wrap: wrap;
     }
     .section-price--item {
-        margin-left: 13px;
-        margin-right: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+    }
+    .section-price--item:last-child{
+        margin-bottom: 0;
+    }
+    .section-premium--left img {
+        margin-right: 0px;
     }
     .section-premium--right {
         padding-left: 35px;
