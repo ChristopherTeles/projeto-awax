@@ -995,6 +995,9 @@ footer {
     .section-team {
         max-width: 280px;
     }
+    .section-testimonials .slide {
+        padding-right: 40px;
+    }
     .section-price {
         flex-wrap: wrap;
     }
