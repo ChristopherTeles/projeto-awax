@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -64,6 +69,11 @@ header{
     border-bottom: 5px solid #b28756;
     color: #CCC;
 }
+
+.nav_1{
+    display: none;
+}
+
 .button {
     display: inline-block;
     background-color: #b28756;
@@ -181,7 +191,7 @@ header{
         color: #FFF;
 }
 
-    /* segunda parte SERVIÇOS*/
+
 
 .section-aboutus{
         display: flex;
@@ -839,6 +849,9 @@ footer {
 /*    TABLET   */
 
 @media (min-width:450px) and (max-width:800px){
+    .nav_1{
+        display: none;
+    }
     .menu-opener{
         width: 45px;
         margin-right: 30px;
@@ -1083,5 +1096,15 @@ footer {
              opacity: 0;
              transition: 1s;
          }
+         .nav_2{
+            display: none;
+        }
+        .nav_1{
+            display:block;
+        }
+        a{
+            transition: 1s;
+        }
+         
 }
 
