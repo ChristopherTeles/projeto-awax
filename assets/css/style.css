@@ -1060,5 +1060,28 @@ footer {
     .footer--item.area3 input {
         width: 285px;
     }
+    .banner h1 {
+        font-size: 30px;
+    }
+    .banner h1 span {
+        padding-left: 55px;
+        font-size: 25px;
+    }
+    .section-projects--filters {
+        text-align: center;
+    }
+    .section-facts {
+        flex-wrap: wrap;
+    }
+    .section-projects--filters li {
+        border: 0px ;
+    }
+
+         /*menu*/
+         
+         nav{
+             opacity: 0;
+             transition: 1s;
+         }
 }
 
