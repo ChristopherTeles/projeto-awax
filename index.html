@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="menu">
-                    <img class="menu-opener" src="assets/imagens/menu.png" onclick="abrirMenu()" ondblclick=""/>
+                    <img class="menu-opener" src="assets/imagens/menu.png" onclick="abrirMenu()" onclick="fecharMenu()"/>
                     <script>
                         function abrirMenu(){ 
                             document.getElementById('menu_nav').style.opacity ='1';
@@ -24,16 +24,18 @@
                         function fecharMenu(){
                             document.getElementById('menu_nav').style.opacity = '0';
                         }
-                        
+                         
+
                     </script>
                     <nav id="menu_nav">
                         <ul>
-                            <li class="active"><a href="">Home</a></li>
-                            <li><a onclick="fecharMenu()" href="">Sobre nós</a></li>
-                            <li><a href="">Serviços</a></li>
-                            <li><a href="">Nossos projetos</a></li>
-                            <li><a href="">Preço</a></li>
-                            <li><a href="">Entre em contato</a></li>   
+                            
+                            <li class="active"><a href="#banner" onclick="fecharMenu()">Home</a></li>
+                            <li><a href="#sobre">Sobre nós</a></li>
+                            <li><a href="#serviços">Serviços</a></li>
+                            <li><a href="#projetos">Nossos projetos</a></li>
+                            <li><a href="#preço">Preço</a></li>
+                            <li><a href="#contato">Entre em contato</a></li>   
                         </ul>
                     </nav>
                 </div>
@@ -75,7 +77,7 @@
             </section>
 <!--SOBRE NÓS-->
             <section class="default light">
-                <div class="section-title">sobre nós</div>
+                <div class="section-title" id="sobre" >sobre nós</div>
                 <div class="section-desc">Quem nós somos?</div>
                 <div class="section-body">
                     <div class="section-aboutus">
@@ -98,7 +100,7 @@
 
 <!--SERVIÇOS-->
             <section class="default dark">
-                <div class="section-title">Serviços</div>
+                <div class="section-title" id="serviços">Serviços</div>
                 <div class="section-desc">Serviços que fornecemos</div>
                 <div class="section-body">
                    <div class="section-services">
@@ -130,7 +132,7 @@
 
 <!--NOSSOS PROJETOS-->
             <section class="default light">
-                <div class="section-title">nossos projetos</div>
+                <div class="section-title" id="projetos">nossos projetos</div>
                 <div class="section-desc">o que criamos</div>
                 <div class="section-body">
                     <div class="section-projects">
@@ -408,8 +410,8 @@
             </section>
  <!--PREÇO-->
             <section class="default light price">
-                <div class="section-title">Price</div>
-                <div class="section-desc">Pricing Table</div>
+                <div class="section-title" id="preço">preço</div>
+                <div class="section-desc">Tabela de preços</div>
                 <div class="section-body">
                     <div class="section-price">
                             <div class="section-price--item">
@@ -574,8 +576,8 @@
 <!--CONTATO-->
 
              <section class="default light">
-                <div class="section-title">nossos projetos</div>
-                <div class="section-desc">o que criamos</div>
+                <div class="section-title" id="contato">entre em contato</div>
+                <div class="section-desc">peça um orçamento</div>
                 <div class="section-body">
                     <div class="section-contact">
                         <form method="post">
