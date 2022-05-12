@@ -1101,19 +1101,13 @@ footer {
         }
         .nav_1{
             display:block;
-            margin-top: -50px;
         }
-        a{
-            transition: 1s;
-        }
-        .menu{
+        .header {
+            width: 379px;
             position: fixed;
-            margin-left: 310px;
-
+            background-color: rgba(0, 0, 0, 0.9);
         }
-        .teste{
-            background-color: red;
-        }
+        
          
 }
 
