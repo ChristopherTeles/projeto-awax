@@ -1101,9 +1101,18 @@ footer {
         }
         .nav_1{
             display:block;
+            margin-top: -50px;
         }
         a{
             transition: 1s;
+        }
+        .menu{
+            position: fixed;
+            margin-left: 310px;
+
+        }
+        .teste{
+            background-color: red;
         }
          
 }
