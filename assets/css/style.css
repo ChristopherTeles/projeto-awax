@@ -963,10 +963,10 @@ footer {
         width: 60vw;
         height: calc(100vh - 100px);
         top: 100px;
-        right: -220px;
+        right: -250px;
     }
     input[type="checkbox"]:checked ~ nav{
-        transform: translateX(-220px);
+        transform: translateX(-250px);
     }
     label{
         z-index: 1;
