@@ -964,9 +964,11 @@ footer {
         height: calc(100vh - 100px);
         top: 100px;
         right: -250px;
+        transition: 1s;
     }
     input[type="checkbox"]:checked ~ nav{
         transform: translateX(-250px);
+        transition: 1s;
     }
     label{
         z-index: 1;
