@@ -1,2 +1,3 @@
 # Projeto-Awax
-Recriando o site do Awax para aprendizagem.
+Site feito para teste prático.
+Feito com HTML, CSS e JS.
